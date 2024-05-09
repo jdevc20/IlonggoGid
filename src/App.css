@@ -1,0 +1,68 @@
+:root {
+    /* Colors */
+    --primary-color: #5352ed;
+    --secondary-color: #ff6b81;
+    --background-color: #f8f9fa;
+    /* Fonts */
+    --font-family: Arial, sans-serif;
+    --font-size: 16px;
+    --font-color: #2f3542;
+    /* Spacing */
+    --padding: 20px;
+    --margin: 10px;
+    /* Other variables */
+    --border-radius: 5px;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding-top: 10px;
+}
+
+.searchBar {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    background-color: #f1f2f6;
+    color: var(--font-color);
+}
+
+.resultContainer {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wordList {
+    background-color: #dfe4ea;
+    width: 500px;
+    height: 80vh;
+    border-radius: 30px;
+    padding: 20px;
+    overflow-y: auto; /* Add scrollbar for overflow */
+}
+
+.word-item {
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 4px 0;
+}
+
+.wordDetailContainer {
+    height: 80vh;
+    width: 500px;
+}
+
+.btn-primary {
+}
