@@ -17,7 +17,11 @@ class Dictionary extends Component {
                 { word: "Palihug", definition: "Please." },
                 { word: "Halong", definition: "Careful." },
                 { word: "Kadlaw", definition: "Laughter." },
-                { word: "Gugma", definition: "Love." }
+                { word: "Gugma", definition: "Love." },
+                { word: "Palihug", definition: "Please." },
+                { word: "Halong", definition: "Careful." },
+                { word: "Kadlaw", definition: "Laughter." },
+                { word: "Gugma", definition: "Love." },
             ]
         };
     }
@@ -42,7 +46,7 @@ class Dictionary extends Component {
                     {selectedWord ? (
                         <WordDetail word={selectedWord} onBack={this.handleBackButtonClick} />
                     ) : (
-                        <div className="wordList">
+                        <div className="wordGrid">
                             {this.state.words.map((word, index) => (
                                 <DictionaryWordItem
                                     key={index}
@@ -57,6 +61,7 @@ class Dictionary extends Component {
             </div>
         );
     }
+
 }
 
 export default Dictionary;

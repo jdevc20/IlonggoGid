@@ -34,6 +34,15 @@ function App() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
+                                <Link className="nav-link" to="/">Dictionary</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/grammar">Grammar</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/grammar">Archives</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/messages">Messages</Link>
                             </li>
                             <li className="nav-item">

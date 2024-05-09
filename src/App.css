@@ -37,32 +37,26 @@ body {
 }
 
 .resultContainer {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wordList {
-    background-color: #dfe4ea;
-    width: 500px;
-    height: 80vh;
-    border-radius: 30px;
-    padding: 20px;
+    height: calc(80vh - 20px); /* Adjust the height to leave space for the search container */
     overflow-y: auto; /* Add scrollbar for overflow */
+    padding: 0 20px; /* Add padding to prevent the scrollbar from overlapping content */
+    margin-top: 10px;
 }
 
-.word-item {
-    background-color: white;
-    padding: 8px;
-    border-radius: 10px;
-    margin: 4px 0;
+.wordGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.wordDetailContainer {
-    height: 80vh;
-    width: 500px;
+.wordTile {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn-primary {
-}
+    .wordTile:hover {
+        background-color: #e0e0e0;
+    }

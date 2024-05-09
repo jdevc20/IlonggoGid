@@ -1,16 +1,12 @@
 import React from 'react';
 
 const DictionaryWordItem = ({ word, definition, onSelect }) => {
-    const handleClick = () => {
-        onSelect({ word, definition });
-    };
-
     return (
-        <div className="word-item" onClick={handleClick}>
-            <p className="word">{word}</p>
+        <div className="wordTile" onClick={onSelect}>
+            <h3>{word}</h3>
             <p>{definition}</p>
         </div>
     );
-}
+};
 
 export default DictionaryWordItem;
