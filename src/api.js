@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:1337'; // Replace this with your actual API URL
+const API_URL = 'https://ilonggogid-api.onrender.com'; // Replace this with your actual API URL
 
 const errorHandler = (error) => {
     if (error.response) {
