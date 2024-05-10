@@ -1,10 +1,4 @@
-import axios from 'axios';
-
-const API_URL = 'http://localhost:1337/'; // Replace this with your actual API URL
-
-const api = axios.create({
-    baseURL: API_URL,
-});
+const API_URL = 'http://localhost:1337'; // Replace this with your actual API URL
 
 const errorHandler = (error) => {
     if (error.response) {
@@ -23,6 +17,36 @@ const errorHandler = (error) => {
     }
 };
 
-api.interceptors.response.use((response) => response.data, errorHandler);
+const api = {
+    get: async (url) => {
+        try {
+            const response = await fetch(API_URL + url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return await response.json();
+        } catch (error) {
+            return errorHandler(error);
+        }
+    },
+    post: async (url, data) => {
+        try {
+            const response = await fetch(API_URL + url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return await response.json();
+        } catch (error) {
+            return errorHandler(error);
+        }
+    },
+    // Add other HTTP methods (put, delete, etc.) as needed
+};
 
 export default api;
