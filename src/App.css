@@ -73,3 +73,46 @@ body {
     font-family: "Poppins", sans-serif;
     color: #57606f;
 }
+
+
+.wordDetailContainer {
+    padding: 20px;
+}
+
+    .wordDetailContainer button {
+        margin-bottom: 20px;
+    }
+
+    .wordDetailContainer h2 {
+        font-size: 24px;
+    }
+
+    .wordDetailContainer h3 {
+        font-size: 18px;
+        color: #666;
+    }
+
+    .wordDetailContainer h4 {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .wordDetailContainer ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .wordDetailContainer li {
+        margin-bottom: 5px;
+    }
+
+    .wordDetailContainer p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+.detail-container {
+    max-width: 600px;
+    padding-top: 10px;
+}

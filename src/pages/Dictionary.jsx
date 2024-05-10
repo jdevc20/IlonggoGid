@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import DictionaryWordItem from '../components/DictionaryWordItem';
-import WordDetail from '../components/WordDetail'
+import WordDetail from '../components/WordDetail';
+import api from '../api';
 
 class Dictionary extends Component {
     constructor(props) {
         super(props);
         this.state = {
             selectedWord: null,
-            words: [
-                { word: "Kumusta", definition: "Used as a greeting." },
-                { word: "Kamusta", definition: "Another way of saying 'Kumusta'." },
-                { word: "Paalam", definition: "Used to say goodbye." },
-                { word: "Salamat", definition: "Thank you." },
-                { word: "Maayong adlaw", definition: "Good day." },
-                { word: "Maayong gabii", definition: "Good evening." },
-                { word: "Palihug", definition: "Please." },
-                { word: "Halong", definition: "Careful." },
-                { word: "Kadlaw", definition: "Laughter." },
-                { word: "Gugma", definition: "Love." },
-                { word: "Palihug", definition: "Please." },
-                { word: "Halong", definition: "Careful." },
-                { word: "Kadlaw", definition: "Laughter." },
-                { word: "Gugma", definition: "Love." },
-            ]
+            words: []
         };
+    }
+
+    componentDidMount() {
+        this.fetchWords();
+    }
+
+    fetchWords = async () => {
+        try {
+            const words = await api.get('/dictionary/words'); // Using your Axios instance
+            this.setState({ words });
+            console.log(words);
+        } catch (error) {
+            console.error('Error fetching words:', error);
+        }
     }
 
     handleWordSelect = (word) => {
@@ -44,13 +44,15 @@ class Dictionary extends Component {
                 </div>
                 <div className="resultContainer">
                     {selectedWord ? (
-                        <WordDetail word={selectedWord} onBack={this.handleBackButtonClick} />
+                        <div className="container detail-container">
+                            <WordDetail word={selectedWord} onBack={this.handleBackButtonClick} />
+                        </div>
                     ) : (
                         <div className="wordGrid">
                             {this.state.words.map((word, index) => (
                                 <DictionaryWordItem
                                     key={index}
-                                    word={word.word}
+                                    word={word}
                                     definition={word.definition}
                                     onSelect={() => this.handleWordSelect(word)}
                                 />
@@ -61,7 +63,6 @@ class Dictionary extends Component {
             </div>
         );
     }
-
 }
 
 export default Dictionary;
