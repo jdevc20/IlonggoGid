@@ -1,6 +1,6 @@
 :root {
     /* Colors */
-    --primary-color: #5352ed;
+    --primary-color: #ff6b81;
     --secondary-color: #ff6b81;
     --background-color: #f8f9fa;
     /* Fonts */
@@ -16,6 +16,10 @@
 
 body {
     background-color: var(--background-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
 }
 
 .searchContainer {
@@ -55,8 +59,17 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    color: #747d8c;
 }
 
     .wordTile:hover {
         background-color: #e0e0e0;
     }
+
+
+.word-header {
+    font-weight: bolder;
+    font-family: "Poppins", sans-serif;
+    color: #57606f;
+}

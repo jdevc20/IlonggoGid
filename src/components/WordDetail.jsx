@@ -5,7 +5,7 @@ const WordDetail = ({ word, onBack }) => {
         <div className="wordDetailContainer">
             <button className="btn btn-primary" onClick={onBack}>Back</button>
             <div className="container mt-4">
-                <h2>{word.word}</h2>
+                <strong>{word.word}</strong>
                 <p>{word.definition}</p>
             </div>
         </div>
