@@ -8,7 +8,8 @@ class Dictionary extends Component {
         super(props);
         this.state = {
             selectedWord: null,
-            words: []
+            words: [],
+            searchTerm: ''
         };
     }
 
@@ -34,13 +35,26 @@ class Dictionary extends Component {
         this.setState({ selectedWord: null });
     }
 
+    handleSearchChange = (event) => {
+        this.setState({ searchTerm: event.target.value });
+    }
+
     render() {
-        const { selectedWord } = this.state;
+        const { selectedWord, searchTerm } = this.state;
+        const filteredWords = this.state.words.filter(word =>
+            word.word.toLowerCase().includes(searchTerm.toLowerCase())
+        );
 
         return (
             <div className="container">
                 <div className="searchContainer">
-                    <input type="text" className="searchBar" placeholder="Search..." />
+                    <input
+                        type="text"
+                        className="searchBar"
+                        placeholder="Search..."
+                        value={searchTerm}
+                        onChange={this.handleSearchChange}
+                    />
                 </div>
                 <div className="resultContainer">
                     {selectedWord ? (
@@ -49,7 +63,7 @@ class Dictionary extends Component {
                         </div>
                     ) : (
                         <div className="wordGrid">
-                            {this.state.words.map((word, index) => (
+                            {filteredWords.map((word, index) => (
                                 <DictionaryWordItem
                                     key={index}
                                     word={word}

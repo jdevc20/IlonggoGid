@@ -3,8 +3,8 @@ import React from 'react';
 const WordDetail = ({ word, onBack }) => {
     return (
         <div className="wordDetailContainer">
-            <button className="btn btn-primary" onClick={onBack}>Back</button>
-            <div className="container mt-4">
+            <button className="btn btn-back" onClick={onBack}><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
+            <div className="container">
                 <h2>{word.word}</h2>
                 <h3 className="mb-4">Pronunciation: {word.pronunciation}</h3>
                 <h4>Definitions:</h4>
