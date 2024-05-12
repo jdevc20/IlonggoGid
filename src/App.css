@@ -131,3 +131,53 @@ body {
     font-size: larger;
     font-size: 2rem;
 }
+
+
+
+
+
+
+
+
+
+.form-container {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.definition {
+    background-color:antiquewhite;
+    margin: 6px;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.form {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.examples {
+    background-color: antiquewhite;
+    margin: 6px;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.btn-add {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-weight: bolder;
+}

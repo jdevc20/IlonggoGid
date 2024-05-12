@@ -9,7 +9,8 @@ class Dictionary extends Component {
         this.state = {
             selectedWord: null,
             words: [],
-            searchTerm: ''
+            searchTerm: '',
+            isLoading: true
         };
     }
 
@@ -19,9 +20,8 @@ class Dictionary extends Component {
 
     fetchWords = async () => {
         try {
-            const words = await api.get('/dictionary/words'); // Using your Axios instance
-            this.setState({ words });
-            console.log(words);
+            const words = await api.get('/dictionary/words');
+            this.setState({ words, isLoading: false });
         } catch (error) {
             console.error('Error fetching words:', error);
         }
@@ -40,7 +40,7 @@ class Dictionary extends Component {
     }
 
     render() {
-        const { selectedWord, searchTerm } = this.state;
+        const { selectedWord, searchTerm, isLoading } = this.state;
         const filteredWords = this.state.words.filter(word =>
             word.word.toLowerCase().includes(searchTerm.toLowerCase())
         );
@@ -57,7 +57,9 @@ class Dictionary extends Component {
                     />
                 </div>
                 <div className="resultContainer">
-                    {selectedWord ? (
+                    {isLoading ? (
+                        <div className="loadingContainer">Loading Dictionary...</div> 
+                    ) : selectedWord ? (
                         <div className="container detail-container">
                             <WordDetail word={selectedWord} onBack={this.handleBackButtonClick} />
                         </div>
