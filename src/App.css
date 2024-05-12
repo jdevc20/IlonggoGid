@@ -16,6 +16,11 @@
 
 body {
     background-color: var(--background-color);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
 }
 
 .navbar {
@@ -76,7 +81,6 @@ body {
 
 .word-header {
     font-weight: bolder;
-    font-family: "Poppins", sans-serif;
     color: #57606f;
     margin-top: 10px;
 }
@@ -180,4 +184,11 @@ body {
     height: 100%;
     color: white;
     font-weight: bolder;
+}
+
+
+.home-landing-message {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
 }

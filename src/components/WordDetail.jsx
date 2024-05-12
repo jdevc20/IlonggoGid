@@ -26,7 +26,7 @@ const WordDetail = ({ word, onBack }) => {
 
 
     return (
-        <div className="wordDetailContainer">
+        <div className="wordDetailContainer roboto-mono-message">
             <button className="btn btn-back" onClick={onBack}><i className="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
             <div className="container">
                 <h2>{word.word}</h2>
