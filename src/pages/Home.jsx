@@ -7,7 +7,7 @@ function Home() {
                 <p>
                     "Welcome to your gateway to the richness of the Hiligaynon/Ilonggo language! Explore our comprehensive dictionary,
                     delve into the intricacies of grammar, and discover the vibrant culture embedded within each word. Whether you're a language enthusiast,
-                    a student, or simply curious, let us guide you through the nuances and beauty of Hiligaynon/Ilonggo. Start your journey now!"
+                    a student, or simply curious, let us guide you through the nuances and beauty of Hiligaynon/Ilonggo."
                 </p>
             </div>
             
