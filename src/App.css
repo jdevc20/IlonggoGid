@@ -18,7 +18,6 @@ body {
     background-color: var(--background-color);
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
 
 }
@@ -191,4 +190,30 @@ body {
     background-color: white;
     padding: 10px;
     border-radius: 20px;
+}
+.home-landing-message-image {
+    background-color: white;
+
+    border-radius: 20px;
+}
+
+
+
+.distribution {
+    height: 100%;
+    width: 100%;
+}
+
+.map-image {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+p {
+    flex: 1; /* Allow the paragraph to grow to fill available space */
+}
+
+.dis-par{
+    margin-top: auto;
 }
