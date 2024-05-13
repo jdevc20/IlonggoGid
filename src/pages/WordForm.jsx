@@ -153,6 +153,7 @@ const WordForm = ({ onSubmit }) => {
                     <option value="preposition">Preposition</option>
                     <option value="conjunction">Conjunction</option>
                     <option value="interjection">Interjection</option>
+                    <option value="none">Not Applicable</option>
                 </select>
             </div>
 
