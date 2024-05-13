@@ -50,7 +50,7 @@ body {
 
 .resultContainer {
     height: calc(80vh - 20px); 
-    overflow-y: auto;
+/*    overflow-y: auto;*/
     padding: 0 20px; 
     margin-top: 10px;
 }
@@ -82,6 +82,10 @@ body {
     font-weight: bolder;
     color: #57606f;
     margin-top: 10px;
+}
+
+.word-header:hover{
+    color: white;
 }
 
 
@@ -125,7 +129,7 @@ body {
     }
 
 .detail-container {
-    max-width: 600px;
+    /*max-width: 800px;*/
     padding-top: 10px;
 }
 
@@ -216,4 +220,89 @@ p {
 
 .dis-par{
     margin-top: auto;
+}
+
+
+/*Word Type*/
+/* Noun */
+/* Noun */
+.noun {
+    background-color: hsl(210, 50%, 70%); /* pastel blue */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+/* Verb */
+.verb {
+    background-color: hsl(120, 50%, 70%); /* pastel green */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    width: auto;
+    display: inline-block;
+}
+
+/* Adjective */
+.adjective {
+    background-color: hsl(40, 70%, 70%); /* pastel orange */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+/* Adverb */
+.adverb {
+    background-color: hsl(270, 50%, 70%); /* pastel purple */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+/* Pronoun */
+.pronoun {
+    background-color: hsl(0, 70%, 70%); /* pastel red */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+/* Preposition */
+.preposition {
+    background-color: hsl(180, 50%, 70%); /* pastel teal */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+/* Conjunction */
+.conjunction {
+    background-color: hsl(30, 50%, 70%); /* pastel brown */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+/* Interjection */
+.interjection {
+    background-color: hsl(300, 70%, 70%); /* pastel magenta */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
+}
+
+
+.none {
+    background-color: hsl(180, 100%, 50%); /* pastel magenta */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    display: inline-block;
 }

@@ -24,12 +24,14 @@ const WordDetail = ({ word, onBack }) => {
         }
     };
 
-
     return (
         <div className="wordDetailContainer roboto-mono-message">
             <button className="btn btn-back" onClick={onBack}><i className="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
             <div className="container">
                 <h2>{word.word}</h2>
+                <p className={`mb-0 ${word.wordType.toLowerCase()}`}>
+                    {word.wordType}
+                </p>
                 <div className="pronunciation">
                     <span className="pronunciation-text">Pronunciation: {word.pronunciation}</span>
                     <button className="btn btn-speak" onClick={handleSpeak}>
@@ -53,9 +55,14 @@ const WordDetail = ({ word, onBack }) => {
                         </li>
                     ))}
                 </ul>
-                <p className="mb-0"><strong>Word Type:</strong> {word.wordType}</p>
-                <p className="mb-0"><strong>Further Details:</strong> {word.furtherDetails}</p>
-                <p className="mb-0"><strong>Etymology:</strong> {word.etymology}</p>
+                {/* Additional Details */}
+                {word.furtherDetails && (
+                    <p className="mb-0"><strong>Additional details :</strong> {word.furtherDetails}</p>
+                )}
+                {/* Etymology */}
+                {word.etymology && (
+                    <p className="mb-0"><strong>Etymology:</strong> {word.etymology}</p>
+                )}
             </div>
         </div>
     );
