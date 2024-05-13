@@ -1,5 +1,5 @@
 import mapimg from '../assets/hiligaynon_map.png';
-
+import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div className="container mt-4">
@@ -30,6 +30,12 @@ function Home() {
                     </div>
                 </div>
             </div >
+            <div className="container home-landing-message mt-2">
+                If you haven't found a word, please help us expand our resources by contributing.
+                <br></br>
+                <Link to="/dictionarycontribute" className="btn btn-primary mt-2">Contribute</Link>
+            </div>
+
 
 
 
