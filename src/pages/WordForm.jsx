@@ -43,7 +43,7 @@ const WordForm = ({ onSubmit }) => {
             setFurtherDetails('');
             setEtymology('');
             setIsRootWord(true);
-            alert("Successfully Submitted Entry");
+            alert("Successfully Submitted Entry. Madamo guid nga salamat sa inyo!");
         } catch (error) {
             console.error('Error submitting form:', error.message);
         }
