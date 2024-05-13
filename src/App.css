@@ -82,6 +82,8 @@ body {
     font-weight: bolder;
     color: #57606f;
     margin-top: 10px;
+    margin-bottom: 0px;
+    
 }
 
 .word-header:hover{
@@ -305,4 +307,10 @@ p {
     border-radius: 5px;
     padding: 3px;
     display: inline-block;
+}
+
+
+.word-type {
+    font-size: smaller;
+    color: slategray;
 }
