@@ -37,7 +37,12 @@ class Dictionary extends Component {
     }
 
     handleSearchChange = (event) => {
-        this.setState({ searchTerm: event.target.value });
+        const searchTerm = this.removeAccents(event.target.value);
+        this.setState({ searchTerm });
+    }
+
+    removeAccents = (str) => {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
 
     render() {
@@ -48,7 +53,7 @@ class Dictionary extends Component {
         const sortedWords = [...words].sort((a, b) => collator.compare(a.word, b.word));
 
         const filteredWords = sortedWords.filter(word =>
-            word.word.toLowerCase().includes(searchTerm.toLowerCase())
+            this.removeAccents(word.word.toLowerCase()).includes(searchTerm.toLowerCase())
         );
 
         return (
