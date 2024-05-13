@@ -158,7 +158,7 @@ body {
 }
 
 .definition {
-    background-color:antiquewhite;
+    border: solid 2px var(--primary-color);
     margin: 6px;
     padding: 6px;
     border-radius: 15px;
@@ -170,7 +170,7 @@ body {
 }
 
 .examples {
-    background-color: antiquewhite;
+    border: solid 2px var(--primary-color);
     margin: 6px;
     padding: 6px;
     border-radius: 15px;
@@ -180,6 +180,11 @@ body {
     background-color: var(--primary-color);
     border-radius: 50%;
     
+}
+
+.btn-delete{
+    background-color: indianred;
+    color: white;
 }
 
 .loadingContainer {
@@ -313,4 +318,12 @@ p {
 .word-type {
     font-size: smaller;
     color: slategray;
+}
+
+label {
+    font-weight: bold;
+}
+
+.full-width-textarea {
+    width: 100%;
 }

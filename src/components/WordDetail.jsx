@@ -38,7 +38,7 @@ const WordDetail = ({ word, onBack }) => {
                         <i className="fa fa-volume-up" aria-hidden="true"></i> Speak
                     </button>
                 </div>
-                <h4>Definitions:</h4>
+                <label>Definitions:</label>
                 <ul>
                     {word.definitions.map((definition, index) => (
                         <li key={index}>
@@ -47,7 +47,7 @@ const WordDetail = ({ word, onBack }) => {
                         </li>
                     ))}
                 </ul>
-                <h4>Examples:</h4>
+                <label>Examples:</label>
                 <ul>
                     {word.examples.map((example, index) => (
                         <li key={index}>
