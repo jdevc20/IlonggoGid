@@ -3,6 +3,7 @@ import DictionaryWordItem from '../components/DictionaryWordItem';
 import WordDetail from '../components/WordDetail';
 import api from '../api';
 
+
 class Dictionary extends Component {
     constructor(props) {
         super(props);
@@ -40,8 +41,13 @@ class Dictionary extends Component {
     }
 
     render() {
-        const { selectedWord, searchTerm, isLoading } = this.state;
-        const filteredWords = this.state.words.filter(word =>
+        const { selectedWord, searchTerm, isLoading, words } = this.state;
+
+        // Sort the words alphabetically without considering accents
+        const collator = new Intl.Collator(undefined, { sensitivity: 'base' });
+        const sortedWords = [...words].sort((a, b) => collator.compare(a.word, b.word));
+
+        const filteredWords = sortedWords.filter(word =>
             word.word.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
@@ -58,7 +64,7 @@ class Dictionary extends Component {
                 </div>
                 <div className="resultContainer">
                     {isLoading ? (
-                        <div className="loadingContainer">Loading Dictionary...</div> 
+                        <div className="loadingContainer">Loading Dictionary...</div>
                     ) : selectedWord ? (
                         <div className="container detail-container">
                             <WordDetail word={selectedWord} onBack={this.handleBackButtonClick} />
