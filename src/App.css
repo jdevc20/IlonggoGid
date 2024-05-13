@@ -57,7 +57,7 @@ body {
 
 .wordGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Automatically adjust columns */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust columns */
     grid-gap: 5px; /* Add some gap between items */
 }
 
